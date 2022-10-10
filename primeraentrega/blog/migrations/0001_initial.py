@@ -7,37 +7,60 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Articulo',
+            name="Articulo",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('titulo', models.CharField(max_length=200)),
-                ('cuerpo', models.TextField()),
-                ('fecha', models.DateField()),
-                ('estado', models.CharField(max_length=10)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("titulo", models.CharField(max_length=200)),
+                ("cuerpo", models.TextField()),
+                ("fecha", models.DateField()),
+                ("estado", models.CharField(max_length=10)),
             ],
         ),
         migrations.CreateModel(
-            name='Categoria',
+            name="Categoria",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nombre', models.CharField(max_length=100)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("nombre", models.CharField(max_length=100)),
             ],
         ),
         migrations.CreateModel(
-            name='Comentario',
+            name="Comentario",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('cuerpo', models.TextField()),
-                ('nombre', models.CharField(max_length=50)),
-                ('apellido', models.CharField(max_length=50)),
-                ('email', models.EmailField(max_length=254)),
-                ('fecha', models.DateField()),
-                ('estado', models.BooleanField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("cuerpo", models.TextField()),
+                ("nombre", models.CharField(max_length=50)),
+                ("apellido", models.CharField(max_length=50)),
+                ("email", models.EmailField(max_length=254)),
+                ("fecha", models.DateField()),
+                ("estado", models.BooleanField()),
             ],
         ),
     ]
